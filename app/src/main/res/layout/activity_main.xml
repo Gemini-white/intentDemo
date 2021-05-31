@@ -6,13 +6,128 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/ButtonToMain"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/a1"
+        android:text="显示跳转"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonToBaidu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonToBaidu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/a2"
+        android:text="百度一下"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/ButtonToMain"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/ButtonToMain"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonToMain" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/a2"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291">
+
+        <EditText
+            android:id="@+id/edit_key"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/a2"
+            android:ems="10"
+            android:hint="提示性文本"
+            android:inputType="textPersonName"
+            android:paddingStart="15dp" />
+
+        <Button
+            android:id="@+id/ButtonToBing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:text="必应"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ButtonToSmS"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/a2"
+        android:text="发送短信"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonToCamera"
+        app:layout_constraintEnd_toEndOf="@+id/ButtonToCamera"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/ButtonToCamera"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonToPhone" />
+
+    <Button
+        android:id="@+id/ButtonToCamera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/a2"
+        android:text="打开相机"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonTolnplicit"
+        app:layout_constraintEnd_toEndOf="@+id/ButtonTolnplicit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/ButtonTolnplicit"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonToSmS" />
+
+    <Button
+        android:id="@+id/ButtonTolnplicit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/a2"
+        android:text="自定义隐式跳转"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonToCamera" />
+
+    <Button
+        android:id="@+id/ButtonToPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/a2"
+        android:text="拨打电话"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonToSmS"
+        app:layout_constraintEnd_toEndOf="@+id/ButtonToSmS"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/ButtonToSmS"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
