@@ -19,5 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mBinding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
+
+        mBinding.ButtonToMain.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this,HelloActivity.class);
+            startActivity(intent);
+        });
     }
 }
