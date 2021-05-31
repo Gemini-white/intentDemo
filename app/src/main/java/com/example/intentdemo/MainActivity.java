@@ -3,6 +3,7 @@ package com.example.intentdemo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.example.intentdemo.databinding.ActivityMainBinding;
@@ -22,6 +23,16 @@ public class MainActivity extends AppCompatActivity {
 
         mBinding.ButtonToMain.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this,HelloActivity.class);
+            startActivity(intent);
+        });
+
+        mBinding.ButtonToBaidu.setOnClickListener(v -> {
+            //设置意图
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            //意图的目的地(将一个字符串转化为URI地址对象)
+            Uri uri = Uri.parse("https://www.baidu.com/");
+            //将网址URI地址对象设置到意图上
+            intent.setData(uri);
             startActivity(intent);
         });
     }
