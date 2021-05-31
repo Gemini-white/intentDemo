@@ -35,5 +35,14 @@ public class MainActivity extends AppCompatActivity {
             intent.setData(uri);
             startActivity(intent);
         });
+
+        mBinding.ButtonToBing.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            //将输入的文字转换出来
+            String i= mBinding.editKey.getText().toString();
+            //意图的目的地(将一个字符串转化为URI地址对象)
+            intent.setData(Uri.parse("https://cn.bing.com/search?q="+i));
+            startActivity(intent);
+        });
     }
 }
