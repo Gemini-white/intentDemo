@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.telecom.Call;
 import android.widget.Toast;
 
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             intent.setData(Uri.parse("https://cn.bing.com/search?q=" + i));
             startActivity(intent);
         });
+
         mBinding.ButtonToPhone.setOnClickListener(v -> {
             //拨打电话的权限
             String callPermission = Manifest.permission.CALL_PHONE;
@@ -63,6 +65,24 @@ public class MainActivity extends AppCompatActivity {
                 call(Intent.ACTION_CALL);
             }
         });
+
+        mBinding.ButtonToSmS.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            //指定要收短信的电话号码
+            intent.setData(Uri.parse("smsto:15915151017"));
+            //设定短信的发送内容(我给他预设的)sms_body表达的就是短信的主题内容
+            intent.putExtra("sms_body","年轻人发送的第一条短信");
+            startActivity(intent);
+        });
+
+        mBinding.ButtonToCamera.setOnClickListener(v -> {
+            //启动系统相机
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivity(intent);
+        });
+
+
+
     }
 
     /**
