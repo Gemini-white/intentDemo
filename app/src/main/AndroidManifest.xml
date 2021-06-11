@@ -11,11 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
+        <activity android:name=".ByeActivity">
+            <intent-filter>
+                <!-- 设置action属性，使其响应我们指定的动作 -->
+                <action android:name="com.my.test" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".HiActivity">
             <intent-filter>
                 <!-- 设置action属性，使其响应我们指定的动作 -->
-                <action android:name="com.my.test"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.my.test" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".HelloActivity" />

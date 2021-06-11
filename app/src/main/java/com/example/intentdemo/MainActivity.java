@@ -81,7 +81,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-
+        mBinding.ButtonTolnplicit.setOnClickListener(v -> {
+            Intent intent = new Intent("com.my.test");
+            startActivity(intent);
+        });
 
     }
 
