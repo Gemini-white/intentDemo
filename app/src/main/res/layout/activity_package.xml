@@ -5,5 +5,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PackageActivity">
+    <TextView
+        android:id="@+id/userText1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/a2"
+        android:text="账号"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/pwdText1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pwdText1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/a2"
+        android:text="密码"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/isAdminText1"
+        app:layout_constraintEnd_toEndOf="@+id/userText1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/userText1"
+        app:layout_constraintTop_toBottomOf="@+id/userText1" />
+
+    <TextView
+        android:id="@+id/isAdminText1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/a2"
+        android:text="是否管理员"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pwdText1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/pwdText1"
+        app:layout_constraintTop_toBottomOf="@+id/pwdText1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

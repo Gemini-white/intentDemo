@@ -37,5 +37,17 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        mBinding.ButtonLogin2.setOnClickListener(v -> {
+            String user = mBinding.user.getText().toString();
+            String pwd = mBinding.pwd.getText().toString();
+            String isAdmin = mBinding.isAdmin.isChecked() ? "是" : "否";
+            if ("".equals(user)|| "".equals(pwd)){
+                Toast.makeText(LoginActivity.this,"请填写账号和密码",Toast.LENGTH_SHORT).show();
+            }else {
+                Intent intent=PackageActivity.newIntent(LoginActivity.this,user,pwd,isAdmin);
+                startActivity(intent);
+            }
+        });
+
     }
 }
